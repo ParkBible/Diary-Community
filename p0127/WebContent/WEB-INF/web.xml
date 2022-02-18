@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>p0126</display-name>
+	<servlet>
+		<servlet-name>magicpacket</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring.xml</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet>
+	<servlet-name>abcd910</servlet-name>
+	<servlet-class>magicpacket.Test910</servlet-class>
+</servlet>
+
+	<servlet>
+	<servlet-name>abcd909</servlet-name>
+	<servlet-class>magicpacket.Test909</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>abcd909</servlet-name>
+	<url-pattern>/test909</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>abcd910</servlet-name>
+	<url-pattern>/test910</url-pattern>
+</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>magicpacket</servlet-name>
+		<url-pattern>*.pknu</url-pattern>
+	</servlet-mapping>
+</web-app>
